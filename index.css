@@ -1,0 +1,108 @@
+:root{
+    --bg-red: #f15f5f;
+    --bg-yellow: #ffff00;
+    --bg-orange: #ffa500;
+    --bg-lightgreen: #90ee90;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.heading{
+    text-align: center;
+    font-family: "Poppins", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+}
+
+.card{
+    display: grid;
+    place-items: center;
+    height: 110px;
+    width: 90px;
+    background-color: var(--bg-yellow);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3 all ease;
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.card img{
+    width: 80%;
+    min-height: 90px;
+    transition: 0.3s all ease;
+    opacity: 0;
+}
+
+.card.clicked{
+    background-color: var(--bg-orange);
+}
+
+.card.checked{
+    background-color: var(--bg-lightgreen);
+}
+
+.card.clicked img,
+.card.checked img {
+    opacity: 1;
+}
+
+.card.shake {
+    background-color: var(--bg-red);
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+      10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+      }
+      20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+      }
+      30% {
+        transform: translate(3px, 2px) rotate(0deg);
+      }
+      40% {
+        transform: translate(1px, -1px) rotate(1deg);
+      }
+      50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+      }
+      60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+      }
+      70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+      }
+      80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+      }
+      90% {
+        transform: translate(1px, 2px) rotate(0deg);
+      }
+      100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+      }
+}
