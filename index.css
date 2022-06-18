@@ -3,7 +3,7 @@
     --bg-yellow: #ffff00;
     --bg-orange: #ffa500;
     --bg-lightgreen: #90ee90;
-    
+    --pink: rgb(76, 195, 246);
 }
 
 *{
@@ -105,4 +105,11 @@
       100% {
         transform: translate(1px, -2px) rotate(-1deg);
       }
+}
+
+
+.call-to-action{
+  background-color: var(--pink);
+  border-radius: 0 5rem;
+  margin: 2rem;
 }
